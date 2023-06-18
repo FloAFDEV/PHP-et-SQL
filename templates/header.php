@@ -1,3 +1,8 @@
+<?php
+require_once('lib/config.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -24,8 +29,8 @@
             </div>
 
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-                <li><a href="#" class="nav-link px-2">Features</a></li>
+                <li><a href="index.php" class="nav-link px-2 link-secondary">Accueil</a></li>
+                <li><a href="recettes.php" class="nav-link px-2">Nos recettes</a></li>
                 <li><a href="#" class="nav-link px-2">Pricing</a></li>
                 <li><a href="#" class="nav-link px-2">FAQs</a></li>
                 <li><a href="#" class="nav-link px-2">About</a></li>
@@ -36,15 +41,3 @@
                 <button type="button" class="btn btn-primary">Sign-up</button>
             </div>
         </header>
-
-        <?php
-        define('_RECIPES_IMG_PATH_', 'uploads/recipes/');
-        ?>
-
-        <?php
-        $recipes = [
-            ['title' => 'Mousse au chocolat', 'description' => 'Une succulente recette transmise avec tradition contenant de vrais morceaux de chocolat craquants dans une mousse légère et onctueuse', 'image' => '1-chocolate-au-mousse.jpg'],
-            ['title' => 'Gratin dauphinois', 'description' => 'lorem*2', 'image' => '2-gratin-dauphinois.jpg'],
-            ['title' => 'Salade', 'description' => 'Lorem*3', 'image' => '3-salade.jpg'],
-        ]
-        ?>

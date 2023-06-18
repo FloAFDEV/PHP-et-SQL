@@ -8,7 +8,7 @@
                 <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Cuisinez comme vous êtes !</h1>
                 <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+                    <a href="recettes.php" class="btn btn-primary btn-lg px-4 me-md-2">Voir nos recettes</a>
                     <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
                 </div>
             </div>
@@ -16,19 +16,17 @@
     </div>
 
     <div class="row text-center">
+        <?php
 
-        <?php foreach ($recipes as $key => $recipe) { ?>
-            <div class="col-md-4 my-2 d-flex justify-content-around">
-                <div class="card" style="width: 18rem;">
-                    <img src="<?= _RECIPES_IMG_PATH_ . $recipe['image']; ?>" class="card-img-top" alt="<?= $recipe['title']; ?>">
-                    <div class="card-body">
-                        <h5 class="card-title"><?= $recipe['title']; ?></h5>
-                        <p class="card-text"><?= $recipe['description']; ?></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-        <?php } ?>
+        $recipes = [
+            ['title' => 'Mousse au chocolat', 'description' => 'lorem*1', 'image' => '1-chocolate-au-mousse.jpg'],
+            ['title' => 'Gratin dauphinois', 'description' => 'lorem*2', 'image' => '2-gratin-dauphinois.jpg'],
+            ['title' => 'Salade de chèvre', 'description' => 'Lorem*3', 'image' => '3-salade.jpg'],
+        ];
+        ?>
+        <?php foreach ($recipes as $key => $recipe) {
+            include('templates/recipe_partial.php');
+        } ?>
 
     </div>
 </main>
