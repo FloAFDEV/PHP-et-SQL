@@ -11,11 +11,13 @@
 </head>
 
 <body>
+
+
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
             <div class="col-md-3 mb-2 mb-md-0">
                 <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-                    <img width="120" src="Assets/CSS/images/logo-book.jpg" alt="Logo du site">
+                    <img width="120" src="assets/images/Logo1.jpg" alt="Logo du site_small">
                     <use xlink:href="#bootstrap"></use>
                     </svg>
                 </a>
@@ -34,3 +36,15 @@
                 <button type="button" class="btn btn-primary">Sign-up</button>
             </div>
         </header>
+
+        <?php
+        define('_RECIPES_IMG_PATH_', 'uploads/recipes/');
+        ?>
+
+        <?php
+        $recipes = [
+            ['title' => 'Mousse au chocolat', 'description' => 'Une succulente recette transmise avec tradition contenant de vrais morceaux de chocolat craquants dans une mousse légère et onctueuse', 'image' => '1-chocolate-au-mousse.jpg'],
+            ['title' => 'Gratin dauphinois', 'description' => 'lorem*2', 'image' => '2-gratin-dauphinois.jpg'],
+            ['title' => 'Salade', 'description' => 'Lorem*3', 'image' => '3-salade.jpg'],
+        ]
+        ?>
