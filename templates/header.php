@@ -1,6 +1,17 @@
 <?php
 require_once('lib/config.php');
 
+$currentPage = basename($_SERVER["SCRIPT_NAME"]);
+//Permet d'écouter l'index de page pour le mettre en active (voir plus loin dans le liens, attention la classe bootstrap doit être compatible pour pouvoir l'afficher)
+
+// if ($currentPage === 'index.php') {
+//     echo 'active';
+// }
+
+// affiche le nom du fichier courant
+// var_dump($_SERVER["SCRIPT_NAME"]);
+// echo basename($_SERVER["SCRIPT_NAME"]);
+
 ?>
 
 <!DOCTYPE html>
@@ -28,12 +39,16 @@ require_once('lib/config.php');
                 </a>
             </div>
 
-            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="index.php" class="nav-link px-2 link-secondary">Accueil</a></li>
-                <li><a href="recettes.php" class="nav-link px-2">Nos recettes</a></li>
-                <li><a href="#" class="nav-link px-2">Pricing</a></li>
-                <li><a href="#" class="nav-link px-2">FAQs</a></li>
-                <li><a href="#" class="nav-link px-2">About</a></li>
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 nav nav-pills">
+                <li class=nav-item><a href="index.php" class="nav-link <?php if ($currentPage === 'index.php') {
+                                                                            echo 'active';
+                                                                        } ?>">Accueil</a></li>
+                <li class=nav-item><a href="recettes.php" class="nav-link <?php if ($currentPage === 'recettes.php') {
+                                                                                echo 'active';
+                                                                            } ?>">Nos recettes</a></li>
+                <li class=nav-item><a href="#" class="nav-link px-2">Pricing</a></li>
+                <li class=nav-item><a href="#" class="nav-link px-2">FAQs</a></li>
+                <li class=nav-item><a href="#" class="nav-link px-2">About</a></li>
             </ul>
 
             <div class="col-md-3 text-end">
