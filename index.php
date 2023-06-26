@@ -2,6 +2,8 @@
 require_once('templates/header.php');
 require_once('lib/recipe.php');
 
+$recipes = getRecipes($pdo, _HOME_RECIPES_LIMIT_);
+
 // $recipes = getRecipes($pdo, _HOME_RECIPES_LIMIT_);
 
 ?>
