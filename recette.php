@@ -1,5 +1,6 @@
 <?php
 require_once('templates/header.php');
+
 require_once('lib/recipe.php');
 require_once('lib/tools.php');
 
@@ -45,7 +46,8 @@ if ($recipe) {
         <ol class="list-group list-group-numbered">
             <?php foreach ($instructions as $key => $instruction) { ?>
                 <li class="list-group-item"><?= $instruction ?></li>
-            <?php } ?>
+            <?php
+            } ?>
         </ol>
     </div>
 
@@ -56,3 +58,4 @@ if ($recipe) {
 <?php } ?>
 
 <?php require_once('templates/footer.php'); ?>
+

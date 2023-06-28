@@ -2,6 +2,7 @@
 require_once('lib/config.php');
 require_once('lib/pdo.php');
 
+
 $currentPage = basename($_SERVER["SCRIPT_NAME"]);
 //Permet d'écouter l'index de page pour le mettre en active (voir plus loin dans le lien, attention la classe bootstrap doit être compatible pour pouvoir l'afficher)
 
