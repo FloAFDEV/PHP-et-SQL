@@ -104,9 +104,11 @@ $recipe = [
 
             <!-- On affiche les catégories dans le select -->
             <?php foreach ($categories as $category) { ?>
-                <option value="<?= $category['id'] ?>"><?php if ($recipe['category_id'] == $category['id']) {
-                                                            echo 'selected="selected"';
-                                                        } ?><?= $category['name'] ?></option>
+                <option value="<?= $category['id'] ?>">
+                    <?php if ($recipe['category_id'] == $category['id']) {
+                        echo 'selected="selected"';
+                    }
+                    ?><?= $category['name'] ?></option>
             <?php } ?>
 
         </select>
