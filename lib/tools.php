@@ -1,5 +1,5 @@
 <?php
-
+// on définie une fonction qui va nous permettre de récupérer les données d'un fichier et de les transformer en tableau
 function linesToArray(string $string)
 {
     return (explode(PHP_EOL, $string));
